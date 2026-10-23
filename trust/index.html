@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="mn" data-site="notary">
+
+<head>
+    <title>Аюулгүй байдал | e-Notary — Нотариатын цахим платформ</title>
+
+<!-- Meta Tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="title" content="e-Notary — Нотариатын цахим платформ">
+<meta name="description" content="e-Notary — нотариатын үйлчилгээг цахимаар авах платформ. eID-ээр нэвтэрч хүсэлтээ илгээж, баримтаа хавсаргаж, нотариатчийн бэлтгэсэн актад утсаараа гарын үсэг зурна.">
+<meta name="keywords" content="цахим нотариат, e-Notary, нотариатын үйлчилгээ, eID Mongolia, PAdES, итгэмжлэл, гэрчлэлт">
+<meta name="author" content="Gerege Systems">
+<meta name="robots" content="index, follow">
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="/images/notary-logo.png">
+
+    <!-- Theme: saved choice, else system preference (runs before paint) -->
+<script>
+    (function () {
+        var t;
+        try { t = localStorage.getItem('theme'); } catch (e) {}
+        if (t !== 'light' && t !== 'dark') {
+            t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', t);
+    })();
+</script>
+
+<!-- Google Font Link (https://fonts.google.com/) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <script type="module" crossorigin src="/assets/app-LtdrfeqL.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/app-B9nbvckS.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+<header class="fixed top-0 inset-x-0 z-140 md:pt-5 pt-3 px-4">
+    <div class="max-w-260 mx-auto">
+        <div class="flex items-center justify-between gap-4 py-2.5 ps-5 pe-2.5 rounded-full border border-fg/10 bg-surface-2/80 backdrop-blur-xl">
+            <a href="/" class="flex items-center gap-2.5 shrink-0">
+                    <span role="img" aria-label="e-Notary" class="logo-tint h-7" style="--logo: url('/images/notary-logo.png')"></span>
+                <span class="text-base font-medium tracking-[-0.02em] text-fg">e-<span class="text-muted">notary</span></span>
+            </a>
+
+            <nav id="navbar" class="hidden lg:flex items-center gap-1">
+                                    <a href="/" class="py-2 px-4 rounded-full text-sm text-muted transition-colors hover:text-fg">Нүүр</a>
+                                    <a href="/#how" class="py-2 px-4 rounded-full text-sm text-muted transition-colors hover:text-fg">Хэрхэн ажилладаг</a>
+                                    <a href="/#steps" class="py-2 px-4 rounded-full text-sm text-muted transition-colors hover:text-fg">Алхам</a>
+                                    <a href="/trust" class="py-2 px-4 rounded-full text-sm text-muted transition-colors hover:text-fg">Аюулгүй байдал</a>
+                            </nav>
+
+            <div class="flex items-center gap-2">
+                <button type="button" data-theme-toggle aria-label="Light / dark горим солих" class="inline-flex size-11 items-center justify-center rounded-full border border-fg/15 text-fg transition-colors hover:bg-fg/5">
+                    <i class="iconify tabler--moon size-5 theme-icon-dark"></i>
+                    <i class="iconify tabler--sun size-5 theme-icon-light"></i>
+                </button>
+
+                <a href="https://enotary.mn/login" class="md:inline-flex hidden items-center gap-2 h-11 px-5 rounded-full bg-accent text-on-accent text-sm font-medium">
+                    Нэвтрэх <i class="iconify tabler--arrow-up-right size-4"></i>
+                </a>
+
+                <button type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="mobile-menu" data-hs-overlay="#mobile-menu" class="lg:hidden inline-flex size-11 items-center justify-center rounded-full border border-fg/15 text-fg">
+                    <i class="iconify tabler--menu-2 size-5"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="hs-overlay hs-overlay-open:translate-y-0 hs-overlay-open:opacity-100 opacity-0 hs-overlay-open:top-auto [--body-scroll:true] fixed inset-x-0 top-0 z-140 -translate-y-full transform transition-all duration-300 lg:hidden px-4" role="dialog" tabindex="-1" aria-labelledby="mobile-menu-label">
+        <div class="max-w-260 mx-auto mt-2 p-2 rounded-3xl border border-fg/10 bg-surface-2">
+            <div class="flex flex-col">
+                                    <a href="/" class="py-3.5 px-4 rounded-2xl text-fg hover:bg-fg/5">Нүүр</a>
+                                    <a href="/#how" class="py-3.5 px-4 rounded-2xl text-fg hover:bg-fg/5">Хэрхэн ажилладаг</a>
+                                    <a href="/#steps" class="py-3.5 px-4 rounded-2xl text-fg hover:bg-fg/5">Алхам</a>
+                                    <a href="/trust" class="py-3.5 px-4 rounded-2xl text-fg hover:bg-fg/5">Аюулгүй байдал</a>
+                                <a href="https://enotary.mn/login" class="mt-2 h-13 inline-flex items-center justify-center rounded-2xl bg-accent text-on-accent font-medium">Нэвтрэх</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <!-- Hero Section -->
+    <section class="relative overflow-hidden lg:pt-44 pt-32">
+        <div class="absolute inset-0 glow-top -z-1"></div>
+
+        <div class="container">
+            <div class="hidden md:flex justify-between mb-14">
+                <div class="label">Аюулгүй<span>байдал</span></div>
+                <div class="label text-center">Цахим<span>акт</span></div>
+                <div class="label text-end">eID<span>Mongolia</span></div>
+            </div>
+
+            <!-- Lock stage -->
+            <div class="relative mx-auto mb-12 size-[min(86vw,480px)]" aria-hidden="true" data-aos="zoom-in">
+                <div class="absolute inset-[18%] rounded-full glow-accent blur-2xl"></div>
+                <div class="absolute inset-0 rounded-full border border-dashed border-fg/15 spin-slow"></div>
+                <div class="absolute inset-[14%] rounded-full border border-fg/8"></div>
+                <div class="absolute inset-x-0 top-1/2 h-px dashed-h"></div>
+                <div class="absolute inset-y-0 start-1/2 w-px dashed-v"></div>
+
+                <img src="/images/home/lock-hero.webp" alt="" class="absolute inset-[12%] size-[76%] object-contain float hero-icon-shadow">
+
+                <img src="/images/icons3d-white/safe.webp" alt="" class="absolute top-[4%] start-[6%] md:size-22 size-16 float [animation-delay:-1.5s]">
+                <img src="/images/icons3d-white/phone-face-id.webp" alt="" class="absolute top-[2%] end-[8%] md:size-22 size-16 float [animation-delay:-3s]">
+                <img src="/images/icons3d-white/phone-qr.webp" alt="" class="absolute bottom-[6%] start-[4%] md:size-22 size-16 float [animation-delay:-4.5s]">
+                <img src="/images/icons3d-white/safe-package.webp" alt="" class="absolute bottom-[4%] end-[6%] md:size-22 size-16 float [animation-delay:-2s]">
+
+                <span class="pill absolute top-1/2 -translate-y-1/2 -start-2 bg-bg">PIN2</span>
+                <span class="pill absolute top-1/2 -translate-y-1/2 -end-2 bg-bg">PAdES-LT</span>
+            </div>
+
+            <div class="text-center" data-aos="fade-up">
+                <div class="flex flex-wrap justify-center gap-2 mb-7">
+                    <span class="pill"><span class="size-1.5 rounded-full bg-accent"></span> Баталгаа</span>
+                </div>
+
+                <h1 class="display max-w-4xl mx-auto mb-6">Хуулийн хүчинтэй <span class="text-muted">цахим акт</span></h1>
+
+                <p class="text-muted md:text-lg max-w-xl mx-auto">PIN2-оор баталгаажсан гарын үсэг. Акт бүр бүртгэлийн дугаартай, нийтэд шалгагдана.</p>
+            </div>
+        </div>
+
+        <div class="relative mt-10 -mb-[4vw] text-center pointer-events-none" aria-hidden="true">
+            <div class="wordmark bg-linear-to-b from-fg/90 to-fg/0 bg-clip-text text-transparent">trust</div>
+        </div>
+    </section>
+
+    <section id="trust" class="lg:py-40 py-24 scroll-mt-24">
+    <div class="container">
+        <div class="relative overflow-hidden rounded-[32px] bg-surface border border-fg/8 lg:p-16 md:p-10 p-7">
+            <div class="absolute -top-40 -end-40 size-120 rounded-full glow-accent blur-3xl opacity-60 pointer-events-none"></div>
+
+            <div class="relative grid lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-6">
+                    <div class="label text-accent mb-4">Баталгаа<span>trust</span></div>
+                    <h2 class="h2 mb-6">Хуулийн хүчинтэй <span class="text-muted">цахим акт</span></h2>
+                    <p class="text-muted mb-10 max-w-lg">eID-ийн мэргэшсэн гарын үсэг (PAdES), цагийн тамга, бүртгэлийн дугаар — хэн ч enotary.mn/verify дээр шалгана.</p>
+
+                    <div class="flex flex-wrap gap-2">
+                                                    <span class="pill">PIN2</span>
+                                                    <span class="pill">PAdES</span>
+                                                    <span class="pill">Timestamp</span>
+                                                    <span class="pill">Verify</span>
+                                            </div>
+                </div>
+
+                <div class="lg:col-span-6 flex flex-col gap-2.5">
+                                            <div class="flex items-center gap-4 h-16 ps-2.5 pe-4 rounded-2xl bg-surface-2" data-aos="fade-up" data-aos-delay="0">
+                            <span class="size-11 shrink-0 inline-flex items-center justify-center rounded-xl bg-bg border border-fg/8">
+                                <img src="/images/icons3d/badge-glass.webp" alt="" class="size-8 object-contain" loading="lazy">
+                            </span>
+                            <span class="flex-1 text-[15px] font-medium">eID-ийн мэргэшсэн гарын үсэг (PAdES)</span>
+                            <span class="text-xs text-muted">01</span>
+                        </div>
+                                            <div class="flex items-center gap-4 h-16 ps-2.5 pe-4 rounded-2xl bg-surface-2" data-aos="fade-up" data-aos-delay="80">
+                            <span class="size-11 shrink-0 inline-flex items-center justify-center rounded-xl bg-bg border border-fg/8">
+                                <img src="/images/icons3d-white/hourglass.webp" alt="" class="size-8 object-contain" loading="lazy">
+                            </span>
+                            <span class="flex-1 text-[15px] font-medium">Цагийн тамга</span>
+                            <span class="text-xs text-muted">02</span>
+                        </div>
+                                            <div class="flex items-center gap-4 h-16 ps-2.5 pe-4 rounded-2xl bg-surface-2" data-aos="fade-up" data-aos-delay="160">
+                            <span class="size-11 shrink-0 inline-flex items-center justify-center rounded-xl bg-bg border border-fg/8">
+                                <img src="/images/icons3d-white/checklist.webp" alt="" class="size-8 object-contain" loading="lazy">
+                            </span>
+                            <span class="flex-1 text-[15px] font-medium">Бүртгэлийн дугаар</span>
+                            <span class="text-xs text-muted">03</span>
+                        </div>
+                                                            <a href="https://enotary.mn/verify" target="_blank" class="group flex items-center gap-4 h-16 ps-2.5 pe-4 rounded-2xl bg-accent text-on-accent" data-aos="fade-up" data-aos-delay="240">
+                        <span class="size-11 shrink-0 inline-flex items-center justify-center rounded-xl bg-bg">
+                            <img src="/images/icons3d-white/phone-qr.webp" alt="" class="size-8 object-contain" loading="lazy">
+                        </span>
+                        <span class="flex-1 text-[15px] font-medium">enotary.mn/verify</span>
+                                                    <i class="iconify tabler--arrow-up-right size-5 transition-transform group-hover:rotate-45"></i>
+                                            </a>
+
+                    <div class="grid sm:grid-cols-2 gap-2.5 mt-6">
+                                                    <div class="flex items-start gap-3 p-4 rounded-2xl border border-fg/8">
+                                <i class="iconify tabler--circle-check-filled size-5 text-accent shrink-0 mt-0.5"></i>
+                                <p class="text-sm">PIN2-оор баталгаажсан гарын үсэг</p>
+                            </div>
+                                                    <div class="flex items-start gap-3 p-4 rounded-2xl border border-fg/8">
+                                <i class="iconify tabler--circle-check-filled size-5 text-accent shrink-0 mt-0.5"></i>
+                                <p class="text-sm">Баримтыг зөвхөн талууд, нотариатч хардаг</p>
+                            </div>
+                                                    <div class="flex items-start gap-3 p-4 rounded-2xl border border-fg/8">
+                                <i class="iconify tabler--circle-check-filled size-5 text-accent shrink-0 mt-0.5"></i>
+                                <p class="text-sm">Нотариатын тухай хуулийн дагуу бүртгэл</p>
+                            </div>
+                                                    <div class="flex items-start gap-3 p-4 rounded-2xl border border-fg/8">
+                                <i class="iconify tabler--circle-check-filled size-5 text-accent shrink-0 mt-0.5"></i>
+                                <p class="text-sm">Акт бүр нийтэд шалгагдана</p>
+                            </div>
+                                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="relative lg:pb-30 pb-20 overflow-hidden">
+    <div class="absolute inset-x-0 bottom-0 h-[70%] -z-1" style="background: radial-gradient(50% 60% at 50% 100%, color-mix(in srgb, var(--accent) 20%, transparent), transparent 70%)"></div>
+
+    <div class="container text-center">
+        <img src="/images/icons3d-white/rocket.webp" alt="" class="size-28 mx-auto mb-6" loading="lazy">
+        <div class="label mb-6">Эхлэх<span>start</span></div>
+        <h2 class="display max-w-4xl mx-auto mb-6">Нотариатын хүсэлтээ <span class="text-accent">өнөөдөр</span> илгээ</h2>
+        <p class="text-muted md:text-lg mb-10">eID Mongolia-ээр нэвтрээд хүсэлтээ нэг минутад илгээнэ.</p>
+
+        <a href="https://enotary.mn/login" class="btn-accent">Эхлэх <i class="iconify tabler--arrow-up-right size-5"></i></a>
+    </div>
+</section>
+
+    <!-- Footer -->
+<footer id="footer" class="relative overflow-hidden border-t border-fg/8 pt-20">
+    <div class="container">
+        <div class="flex flex-col items-center text-center mb-16">
+                <span role="img" aria-label="e-Notary" class="logo-tint h-14 mb-5" style="--logo: url('/images/notary-logo.png')"></span>
+            <p class="text-muted">Нотариатын цахим платформ.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-10 pb-12 border-b border-fg/8">
+            <div>
+                <div class="label mb-5">Цэс<span>menu</span></div>
+                <div class="space-y-3 *:block *:text-muted *:hover:text-fg *:transition-colors">
+                                                                        <a href="/">Нүүр</a>
+                                                                                                <a href="/#how">Хэрхэн ажилладаг</a>
+                                                                                                <a href="/#steps">Алхам</a>
+                                                                                                        </div>
+            </div>
+
+            <div class="md:text-center">
+                <div class="label mb-5">Платформ<span>platform</span></div>
+                <div class="space-y-3 *:block *:text-muted *:hover:text-fg *:transition-colors">
+                    <a href="/trust">Аюулгүй байдал</a>
+                                            <a href="https://enotary.mn/verify" target="_blank">Шалгах</a>
+                                        <a href="https://enotary.mn/login">Нэвтрэх</a>
+                </div>
+            </div>
+
+            <div class="md:text-end">
+                <div class="label mb-5">Gerege<span>systems</span></div>
+                <p class="text-muted">Gerege Nexus дээр суурилсан</p>
+            </div>
+        </div>
+
+        <div class="flex md:flex-row flex-col justify-between gap-2 py-6 text-xs text-muted">
+            <div>© 2026 Gerege Systems · e-Notary</div>
+            <div><span>BUILT ON</span> <span class="text-fg font-bold">GEREGE NEXUS</span></div>
+        </div>
+    </div>
+
+    <div class="text-center -mb-[6vw] pointer-events-none" aria-hidden="true">
+        <div class="wordmark bg-linear-to-b from-accent/70 via-accent/20 to-transparent bg-clip-text text-transparent">gerege</div>
+    </div>
+</footer>
+
+</body>
+
+</html>
